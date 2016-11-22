@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5900B5B-4960-4DCA-8B03-AD53246C0267}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebScraper</RootNamespace>
+    <AssemblyName>WebScraper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201609081933304_InitialMigration.cs" />
+    <Compile Include="Migrations\201609081933304_InitialMigration.Designer.cs">
+      <DependentUpon>201609081933304_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609141515562_AdditionalBuildUppColumns.cs" />
+    <Compile Include="Migrations\201609141515562_AdditionalBuildUppColumns.Designer.cs">
+      <DependentUpon>201609141515562_AdditionalBuildUppColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201351374_AddArchitectureDotComFields.cs" />
+    <Compile Include="Migrations\201609201351374_AddArchitectureDotComFields.Designer.cs">
+      <DependentUpon>201609201351374_AddArchitectureDotComFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221018341_AddCiatFields.cs" />
+    <Compile Include="Migrations\201609221018341_AddCiatFields.Designer.cs">
+      <DependentUpon>201609221018341_AddCiatFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221103103_AddSocialMediaAndMobileNumberFields.cs" />
+    <Compile Include="Migrations\201609221103103_AddSocialMediaAndMobileNumberFields.Designer.cs">
+      <DependentUpon>201609221103103_AddSocialMediaAndMobileNumberFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609241520582_AddEndsDirectoryFields.cs" />
+    <Compile Include="Migrations\201609241520582_AddEndsDirectoryFields.Designer.cs">
+      <DependentUpon>201609241520582_AddEndsDirectoryFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609261551504_AddLandscapeInstituteFields.cs" />
+    <Compile Include="Migrations\201609261551504_AddLandscapeInstituteFields.Designer.cs">
+      <DependentUpon>201609261551504_AddLandscapeInstituteFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610041246179_AddHouzzFields.cs" />
+    <Compile Include="Migrations\201610041246179_AddHouzzFields.Designer.cs">
+      <DependentUpon>201610041246179_AddHouzzFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610041247145_RemoveDeuplicateField.cs" />
+    <Compile Include="Migrations\201610041247145_RemoveDeuplicateField.Designer.cs">
+      <DependentUpon>201610041247145_RemoveDeuplicateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610210848200_AddedFieldsForCIBSE.cs" />
+    <Compile Include="Migrations\201610210848200_AddedFieldsForCIBSE.Designer.cs">
+      <DependentUpon>201610210848200_AddedFieldsForCIBSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610241501308_AddEmailScraperFields.cs" />
+    <Compile Include="Migrations\201610241501308_AddEmailScraperFields.Designer.cs">
+      <DependentUpon>201610241501308_AddEmailScraperFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\BuildUppProfile.cs" />
+    <Compile Include="Model\ScrapedItem.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Scraper\RTPIConsultants.cs" />
+    <Compile Include="Scraper\FMScraper.cs" />
+    <Compile Include="Scraper\EmailExtractor.cs" />
+    <Compile Include="Scraper\PaginationScraper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scraper\SeleniumScraper.cs" />
+    <Compile Include="Scraper\BIIDScraper.cs" />
+    <Compile Include="Scraper\NADCScraper.cs" />
+    <Compile Include="Scraper\IOAScraper.cs" />
+    <Compile Include="Scraper\FIAScraper.cs" />
+    <Compile Include="Scraper\AssociationOfNoiseScraper.cs" />
+    <Compile Include="Scraper\TemplateScraper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609081933304_InitialMigration.resx">
+      <DependentUpon>201609081933304_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609141515562_AdditionalBuildUppColumns.resx">
+      <DependentUpon>201609141515562_AdditionalBuildUppColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201351374_AddArchitectureDotComFields.resx">
+      <DependentUpon>201609201351374_AddArchitectureDotComFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221018341_AddCiatFields.resx">
+      <DependentUpon>201609221018341_AddCiatFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221103103_AddSocialMediaAndMobileNumberFields.resx">
+      <DependentUpon>201609221103103_AddSocialMediaAndMobileNumberFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609241520582_AddEndsDirectoryFields.resx">
+      <DependentUpon>201609241520582_AddEndsDirectoryFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609261551504_AddLandscapeInstituteFields.resx">
+      <DependentUpon>201609261551504_AddLandscapeInstituteFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610041246179_AddHouzzFields.resx">
+      <DependentUpon>201610041246179_AddHouzzFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610041247145_RemoveDeuplicateField.resx">
+      <DependentUpon>201610041247145_RemoveDeuplicateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610210848200_AddedFieldsForCIBSE.resx">
+      <DependentUpon>201610210848200_AddedFieldsForCIBSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610241501308_AddEmailScraperFields.resx">
+      <DependentUpon>201610241501308_AddEmailScraperFields.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
